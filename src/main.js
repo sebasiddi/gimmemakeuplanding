@@ -1,0 +1,191 @@
+import './style.scss'
+
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const mm = gsap.matchMedia()
+
+
+// ==============================
+// DESKTOP
+// ==============================
+
+mm.add('(min-width: 769px)', () => {
+
+  const heroTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: '+=150%',
+      scrub: 1,
+      pin: true,
+      markers: false
+    }
+  })
+
+  heroTl
+
+    .to('.hero__shape--pink', {
+      x: -220,
+      y: -120,
+      rotation: -25
+    }, 0)
+
+    .to('.hero__shape--white', {
+      x: 120,
+      y: -180,
+      scale: 1.4
+    }, 0)
+
+    .to('.hero__shape--orange-ball', {
+      x: 180,
+      y: 80,
+      scale: 1.3
+    }, 0)
+
+    .to('.hero__shape--yellow', {
+      x: -250,
+      y: 180,
+      rotation: -20
+    }, 0)
+
+    .to('.hero__shape--orange-line', {
+      x: 250,
+      y: 160,
+      rotation: 20
+    }, 0)
+
+    .to('.hero__shape--orange', {
+      x: 300,
+      y: -100,
+      rotation: 15
+    }, 0)
+
+    .to('.hero h1', {
+      scale: 1.15
+    }, 0)
+
+})
+
+
+// ==============================
+// MOBILE
+// ==============================
+
+mm.add('(max-width: 768px)', () => {
+
+  const heroTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: '+=100%',
+      scrub: 1,
+      pin: true,
+      markers: true
+    }
+  })
+
+  heroTl
+
+    .to('.hero__shape--pink', {
+      x: -50,
+      y: -70,
+      rotation: -15
+    }, 0)
+
+    .to('.hero__shape--white', {
+      x: 30,
+      y: -60,
+      scale: 1.2
+    }, 0)
+
+    .to('.hero__shape--orange-ball', {
+      x: 50,
+      y: 30,
+      scale: 1.15
+    }, 0)
+
+    .to('.hero__shape--yellow', {
+      x: -60,
+      y: 80,
+      rotation: -12
+    }, 0)
+
+    .to('.hero__shape--orange-line', {
+      x: 60,
+      y: 70,
+      rotation: 12
+    }, 0)
+
+    .to('.hero__shape--orange', {
+      x: 70,
+      y: -50,
+      rotation: 8
+    }, 0)
+
+    .to('.hero h1', {
+      scale: 1.06
+    }, 0)
+
+})
+
+// ======================================
+// PRODUCTOS - ENTRADA SUAVE
+// ======================================
+gsap.utils.toArray('.product').forEach((product) => {
+
+  const image = product.querySelector('.product__image')
+  const content = product.querySelector('.product__content')
+
+  gsap.fromTo(
+    image,
+    {
+      y: 80,
+      opacity: 0,
+      scale: 0.96
+    },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 1.2,
+      ease: 'power3.out',
+
+      scrollTrigger: {
+        trigger: product,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+        invalidateOnRefresh: true
+      }
+    }
+  )
+
+  gsap.fromTo(
+    content,
+    {
+      y: 60,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 2,
+      delay: 0.25,
+      ease: 'power3.out',
+
+      scrollTrigger: {
+        trigger: product,
+        start: 'top 78%',
+        toggleActions: 'play none none reverse',
+        invalidateOnRefresh: true
+      }
+    }
+  )
+
+})
+
+window.addEventListener('load', () => {
+  ScrollTrigger.refresh()
+})
