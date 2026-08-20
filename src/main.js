@@ -83,7 +83,7 @@ mm.add('(max-width: 768px)', () => {
       end: '+=100%',
       scrub: 1,
       pin: true,
-      markers: true
+      markers: false
     }
   })
 
