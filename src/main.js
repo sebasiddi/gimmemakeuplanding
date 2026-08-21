@@ -1,5 +1,3 @@
-import './style.scss'
-
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -189,3 +187,55 @@ gsap.utils.toArray('.product').forEach((product) => {
 window.addEventListener('load', () => {
   ScrollTrigger.refresh()
 })
+
+// ======================================
+// ANIMACIÓN DE + Y -
+// ======================================
+
+
+const ingredients = document.querySelectorAll(".ingredient");
+
+ingredients.forEach((item) => {
+  const summary = item.querySelector(".ingredient__summary");
+  const content = item.querySelector(".ingredient__content");
+
+  summary.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (item.open) {
+      // CERRAR
+      gsap.to(content, {
+        height: 0,
+        opacity: 0,
+        duration: 0.4,
+        ease: "power2.inOut",
+        onComplete: () => {
+          item.open = false;
+
+          gsap.set(content, {
+            clearProps: "height,opacity"
+          });
+        }
+      });
+
+    } else {
+      // ABRIR
+      item.open = true;
+
+      gsap.fromTo(
+        content,
+        {
+          height: 0,
+          opacity: 0
+        },
+        {
+          height: "auto",
+          opacity: 1,
+          duration: 0.45,
+          ease: "power2.out",
+          clearProps: "height"
+        }
+      );
+    }
+  });
+});
