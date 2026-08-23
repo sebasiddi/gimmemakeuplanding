@@ -1,0 +1,492 @@
+[
+  {
+    "id": "tei-look-eyeshadow-palette",
+    "name": "Paleta de sombras LOOK",
+    "brand": "TEI Makeup",
+    "category": "Paleta de sombras",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Mica (and) Triethoxycaprylylsilane",
+          "Talc (and) Triethoxycaprylylsilane",
+          "Zinc Stearate",
+          "2-Ethylhexyl Palmitate",
+          "Hydrogenated Polyisobutene",
+          "Squalane",
+          "Octyldodecanol",
+          "Tocopheryl Acetate",
+          "Imidazolidinyl Urea",
+          "Fragrance",
+          "Pigment"
+        ]
+      },
+      {
+        "title": "Puede contener (+/-)",
+        "items": [
+          "CI 77491",
+          "CI 77499",
+          "CI 15850:1",
+          "CI 77891",
+          "CI 15850",
+          "CI 15850:2",
+          "CI 16035",
+          "CI 42090",
+          "CI 19140"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+
+  {
+    "id": "tei-matte-lipstick",
+    "name": "Matte Lipstick",
+    "brand": "TEI Cosmética",
+    "category": "Labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Isohexadecane",
+          "Beeswax",
+          "Mineral Oil",
+          "Ozokerite",
+          "Lanolin",
+          "Synthetic Candelilla Wax",
+          "Tocopherol",
+          "Fragrance",
+          "Methylparaben",
+          "Propylparaben"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 77491",
+          "CI 77492"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+
+  {
+    "id": "pink21-lip-gloss",
+    "name": "Lip Gloss",
+    "brand": "Pink 21",
+    "category": "Brillo labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Ethylhexyl/Propylene/Styrene Copolymer",
+          "Silicadimethyl Silylate",
+          "Isododecane",
+          "Beeswax",
+          "Polydimethylsiloxane/Hydroxyterminated",
+          "Mica",
+          "Dibutyl Hydroxy Toluene",
+          "Methylparaben",
+          "Propylparaben"
+        ]
+      },
+      {
+        "title": "Pigmentos",
+        "items": [
+          "CI 77499",
+          "CI 77491",
+          "CI 77492",
+          "CI 45410",
+          "CI 15850:2",
+          "CI 15850:1",
+          "CI 42090",
+          "CI 19140",
+          "CI 77891"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+
+  {
+    "id": "mely-lip-balm",
+    "name": "Lip Balm",
+    "brand": "Mely Beauty",
+    "category": "Bálsamo labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Tridecyl Trimellitate",
+          "Mineral Oil",
+          "Isononyl Isononanoate",
+          "Caprylic/Capric Triglyceride",
+          "Ceresin",
+          "Polyisobutene",
+          "Diisostearyl Malate",
+          "Synthetic Wax",
+          "Beeswax",
+          "Polyethylene",
+          "Microcrystalline Wax",
+          "Phenoxyethanol",
+          "Parfum"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+
+  {
+    "id": "tei-polvo-de-hadas",
+    "name": "Polvo de Hadas",
+    "brand": "TEI",
+    "category": "Highlight Powder",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Mica",
+          "Synthetic Fluorphlogopite",
+          "Ethylhexyl Palmitate",
+          "Magnesium Stearate",
+          "Silica",
+          "Methylparaben",
+          "Propylparaben"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 77491",
+          "CI 77492",
+          "CI 77861"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+
+  {
+    "id": "tei-mascarilla-hidratante",
+    "name": "Mascarilla Hidratante",
+    "brand": "TEI",
+    "category": "Mascarilla facial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Aqua",
+          "Propylene Glycol",
+          "Glycerin",
+          "Hydroxyethylcellulose",
+          "PEG-40 Hydrogenated Castor Oil",
+          "Allantoin",
+          "Parfum",
+          "Disodium EDTA",
+          "Sodium Hyaluronate"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+
+  {
+    "id": "pink21-roll-and-glow-highlighter",
+    "name": "Roll & Glow Highlighter",
+    "brand": "Pink 21",
+    "category": "Iluminador líquido",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Aqua",
+          "Isododecane",
+          "Kaolin",
+          "Diisostearyl Malate",
+          "Glycerin",
+          "Dimethicone",
+          "Acrylates Copolymer",
+          "Disteardimonium",
+          "Lauryl PEG-9 Polydimethylsiloxyethyl Dimethicone",
+          "PEG-10 Dimethicone",
+          "Disodium Stearoyl Glutamate",
+          "Tocopherol",
+          "Salicylic Acid",
+          "Sodium Dehydroacetate",
+          "Chlorphenesin",
+          "Sodium Hydroxide",
+          "Ascorbyl Palmitate",
+          "Aluminum Hydroxide"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77019",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+
+  {
+    "id": "tejar-lip-balm",
+    "name": "Lip Balm",
+    "brand": "Tejar Makeup",
+    "category": "Bálsamo labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Squalane",
+          "Microcrystalline Wax",
+          "Hydrogenated Polyisobutene",
+          "2-Ethylhexyl Palmitate",
+          "Bis-Diglyceryl Polyacyladipate-2",
+          "Octyldodecanol",
+          "Hydrogenated Olive Oil",
+          "Silica",
+          "Tocopheryl Acetate",
+          "Fragrance",
+          "Pigment"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 15850",
+          "CI 15850:2",
+          "CI 16035",
+          "CI 42090",
+          "CI 19140"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+
+  {
+    "id": "mely-lip-gloss",
+    "name": "Lip Gloss",
+    "brand": "Mely Beauty",
+    "category": "Brillo labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Mineral Oil",
+          "Ethylhexyl Palmitate",
+          "Butylene/Ethylene/Styrene Copolymer",
+          "Polyisobutene",
+          "Silica Dimethyl Silylate",
+          "Mica",
+          "Propylparaben",
+          "Parfum"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 77492",
+          "CI 15850",
+          "CI 77491",
+          "CI 77499",
+          "CI 77742"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+
+  {
+    "id": "tei-matte-lip-gloss",
+    "name": "Matte Lip Gloss",
+    "brand": "TEI",
+    "category": "Brillo labial matte",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Dimethicone",
+          "Dimethicone Crosspolymer",
+          "Polyisobutene",
+          "Isododecane",
+          "Petrolatum",
+          "Polyglyceryl-3 Diisostearate",
+          "Mica",
+          "Methylparaben",
+          "Fragrance"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77491",
+          "CI 77492",
+          "CI 77891",
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+
+  {
+    "id": "tei-color-change-lip-balm",
+    "name": "Color Change Lip Balm",
+    "brand": "TEI Cosmética",
+    "category": "Bálsamo labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Ethylhexyl Palmitate",
+          "Beeswax",
+          "Mineral Oil",
+          "Ozokerite",
+          "Petrolatum",
+          "Synthetic Candelilla Wax",
+          "Tocopherol",
+          "Fragrance",
+          "Methylparaben",
+          "Propylparaben"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 45380",
+          "CI 15850"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+
+  {
+    "id": "pink21-sparks-palette",
+    "name": "Sparks Eyeshadow + Highlighter + Glitter",
+    "brand": "Pink 21",
+    "category": "Paleta de sombras, iluminador y glitter",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Sombras para ojos",
+        "items": [
+          "Talc",
+          "Mica",
+          "Muscovite",
+          "Liquid Paraffin",
+          "Petrolatum",
+          "Magnesium Stearate",
+          "Ethylhexyl Palmitate",
+          "Decamethyl Cyclopentasiloxane",
+          "Methylparaben",
+          "Nipasol"
+        ]
+      },
+      {
+        "title": "Pigmentos",
+        "items": [
+          "CI 77491",
+          "CI 77492",
+          "CI 77499",
+          "CI 77891",
+          "CI 77019"
+        ]
+      },
+      {
+        "title": "Iluminador",
+        "items": [
+          "Mica",
+          "Dimethicone",
+          "Silica",
+          "CI 77891",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499",
+          "CI 77742",
+          "CI 19140",
+          "CI 42090",
+          "CI 16035",
+          "CI 15850:1",
+          "CI 15850:2",
+          "CI 45410:2"
+        ]
+      },
+      {
+        "title": "Glitter",
+        "items": [
+          "Polyethylene Terephthalate",
+          "Aluminum",
+          "Polysilicone-1"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  }
+]

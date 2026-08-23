@@ -193,49 +193,124 @@ window.addEventListener('load', () => {
 // ======================================
 
 
-const ingredients = document.querySelectorAll(".ingredient");
 
-ingredients.forEach((item) => {
-  const summary = item.querySelector(".ingredient__summary");
-  const content = item.querySelector(".ingredient__content");
 
-  summary.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    if (item.open) {
-      // CERRAR
-      gsap.to(content, {
-        height: 0,
-        opacity: 0,
-        duration: 0.4,
-        ease: "power2.inOut",
-        onComplete: () => {
-          item.open = false;
-
-          gsap.set(content, {
-            clearProps: "height,opacity"
-          });
-        }
-      });
-
-    } else {
-      // ABRIR
-      item.open = true;
-
-      gsap.fromTo(
-        content,
-        {
+function initIngredientAccordions() {
+  const ingredients = document.querySelectorAll(".ingredient");
+  
+  ingredients.forEach((item) => {
+    const summary = item.querySelector(".ingredient__summary");
+    const content = item.querySelector(".ingredient__content");
+    
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+      
+      if (item.open) {
+        // CERRAR
+        gsap.to(content, {
           height: 0,
-          opacity: 0
-        },
-        {
-          height: "auto",
-          opacity: 1,
-          duration: 0.45,
-          ease: "power2.out",
-          clearProps: "height"
-        }
-      );
-    }
+          opacity: 0,
+          duration: 0.4,
+          ease: "power2.inOut",
+          
+          onComplete: () => {
+            item.open = false;
+            
+            gsap.set(content, {
+              clearProps: "height,opacity"
+            });
+          }
+        });
+        
+      } else {
+        // ABRIR
+        item.open = true;
+        
+        gsap.fromTo(
+          content,
+          {
+            height: 0,
+            opacity: 0
+          },
+          {
+            height: "auto",
+            opacity: 1,
+            duration: 0.45,
+            ease: "power2.out",
+            clearProps: "height"
+          }
+        );
+      }
+    });
   });
-});
+}
+
+// ======================================
+// CARGA DE INGREDIENTES
+// ======================================
+
+
+async function loadProducts() {
+  try {
+    const response = await fetch("/data/products.json");
+    
+    if (!response.ok) {
+      throw new Error(`Error al cargar products.json: ${response.status}`);
+    }
+
+    const products = await response.json();
+
+    const list = document.querySelector("#ingredients-list");
+
+    if (!list) {
+      console.error("No se encontró #ingredients-list");
+      return;
+    }
+
+    products.forEach((product, index) => {
+      const number = String(index + 1).padStart(2, "0");
+
+      const groupsHTML = product.groups
+        .map(
+          (group) => `
+            <div class="ingredient__group">
+              <h4>${group.title}</h4>
+              <p>${group.items.join(", ")}.</p>
+            </div>
+          `
+        )
+        .join("");
+
+      const ingredient = document.createElement("details");
+
+      ingredient.className = "ingredient";
+
+      ingredient.innerHTML = `
+        <summary class="ingredient__summary">
+          <div>
+            <span class="ingredient__number">${number}</span>
+            <h3>${product.name}</h3>
+            <p>${product.brand}</p>
+          </div>
+
+          <span class="ingredient__plus"></span>
+        </summary>
+
+        <div class="ingredient__content">
+          ${groupsHTML}
+        </div>
+      `;
+
+      list.appendChild(ingredient);
+    });
+
+    // Ahora que existen los acordeones,
+    // activamos la animación.
+    initIngredientAccordions();
+
+  } catch (error) {
+    console.error("No se pudieron cargar los productos:", error);
+  }
+}
+
+loadProducts();
