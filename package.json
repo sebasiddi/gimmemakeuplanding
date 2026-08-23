@@ -6,7 +6,7 @@
 "scripts": {
   "dev": "concurrently \"npm run sass:watch\" \"vite --open\"",  "sass": "sass src/scss/main.scss src/css/main.css",
   "sass:watch": "sass --watch src/scss/main.scss:src/css/main.css",
-  "build": "npm run sass && vite build",
+  "build": "vite build",
   "preview": "vite preview"
 },
   "devDependencies": {
