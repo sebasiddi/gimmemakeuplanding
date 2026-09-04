@@ -578,6 +578,55 @@ body {
 .product--right .product__content {
   order: 1;
 }
+.product .hidden-gems-product .product__image--sequence {
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+}
+.product .hidden-gems-product .product__image--sequence img {
+  width: 100%;
+  max-width: 950px;
+  max-height: 78vh;
+  height: auto;
+  object-fit: contain;
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
+  transition: none;
+}
+.product .hidden-gems-product .product__image--sequence img:hover {
+  transform: none;
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  .product .hidden-gems-product .product__image--sequence {
+    min-height: 430px;
+  }
+  .product .hidden-gems-product .product__image--sequence img {
+    max-height: 65vh;
+  }
+}
+@media (max-width: 768px) {
+  .product .hidden-gems-product .product__image--sequence {
+    min-height: 340px;
+  }
+  .product .hidden-gems-product .product__image--sequence img {
+    max-width: 650px;
+    max-height: 48vh;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+@media (max-width: 480px) {
+  .product .hidden-gems-product .product__image--sequence {
+    min-height: 290px;
+  }
+  .product .hidden-gems-product .product__image--sequence img {
+    max-height: 42vh;
+  }
+}
 @media (max-width: 1024px) {
   .product {
     min-height: 75vh;

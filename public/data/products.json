@@ -490,3 +490,22 @@
     }
   }
 ]
+
+/* [
+  {
+    "id": "nombre-unico-del-producto",
+    "name": "Nombre visible del producto",
+    "brand": "Marca",
+    "active": true,
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "content": "Ingrediente 1, Ingrediente 2, Ingrediente 3."
+      },
+      {
+        "title": "Puede contener",
+        "content": "CI 00000, CI 00001, CI 00002."
+      }
+    ]
+  }
+] */

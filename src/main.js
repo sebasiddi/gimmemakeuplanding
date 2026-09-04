@@ -314,3 +314,52 @@ async function loadProducts() {
 }
 
 loadProducts();
+
+const hiddenGemsImage = document.querySelector(
+  '.hidden-gems-sequence__image'
+)
+
+const hiddenGemsFrames = []
+
+for (let i = 1; i <= 7; i++) {
+  hiddenGemsFrames.push(
+    `/images/products/calendario-15-${i}.png`
+  )
+}
+
+hiddenGemsFrames.forEach((src) => {
+  const img = new Image()
+  img.src = src
+})
+
+const hiddenGemsSequence = {
+  frame: 0
+}
+
+gsap.to(hiddenGemsSequence, {
+  frame: hiddenGemsFrames.length - 1,
+
+  ease: 'none',
+
+  scrollTrigger: {
+    trigger: '.hidden-gems-product',
+
+    start: 'top top',
+
+    end: '+=250%',
+
+    scrub: 0.5,
+
+    pin: true,
+
+    markers: false,
+
+    invalidateOnRefresh: true
+  },
+
+  onUpdate: () => {
+    const frame = Math.round(hiddenGemsSequence.frame)
+
+    hiddenGemsImage.src = hiddenGemsFrames[frame]
+  }
+})
