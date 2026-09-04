@@ -6,9 +6,9 @@ gsap.registerPlugin(ScrollTrigger)
 const mm = gsap.matchMedia()
 
 
-// ==============================
-// DESKTOP
-// ==============================
+// ======================================
+// HERO - DESKTOP
+// ======================================
 
 mm.add('(min-width: 769px)', () => {
 
@@ -19,12 +19,12 @@ mm.add('(min-width: 769px)', () => {
       end: '+=150%',
       scrub: 1,
       pin: true,
-      markers: false
+      markers: false,
+      invalidateOnRefresh: true
     }
   })
 
   heroTl
-
     .to('.hero__shape--pink', {
       x: -220,
       y: -120,
@@ -68,9 +68,9 @@ mm.add('(min-width: 769px)', () => {
 })
 
 
-// ==============================
-// MOBILE
-// ==============================
+// ======================================
+// HERO - MOBILE
+// ======================================
 
 mm.add('(max-width: 768px)', () => {
 
@@ -81,12 +81,12 @@ mm.add('(max-width: 768px)', () => {
       end: '+=100%',
       scrub: 1,
       pin: true,
-      markers: false
+      markers: false,
+      invalidateOnRefresh: true
     }
   })
 
   heroTl
-
     .to('.hero__shape--pink', {
       x: -50,
       y: -70,
@@ -129,103 +129,121 @@ mm.add('(max-width: 768px)', () => {
 
 })
 
+
 // ======================================
 // PRODUCTOS - ENTRADA SUAVE
 // ======================================
+
 gsap.utils.toArray('.product').forEach((product) => {
 
   const image = product.querySelector('.product__image')
   const content = product.querySelector('.product__content')
 
-  gsap.fromTo(
-    image,
-    {
-      y: 80,
-      opacity: 0,
-      scale: 0.96
-    },
-    {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      duration: 1.2,
-      ease: 'power3.out',
+  if (image) {
+    gsap.fromTo(
+      image,
+      {
+        y: 80,
+        opacity: 0,
+        scale: 0.96
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        ease: 'power3.out',
 
-      scrollTrigger: {
-        trigger: product,
-        start: 'top 80%',
-        toggleActions: 'play none none reverse',
-        invalidateOnRefresh: true
+        scrollTrigger: {
+          trigger: product,
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+          invalidateOnRefresh: true
+        }
       }
-    }
-  )
+    )
+  }
 
-  gsap.fromTo(
-    content,
-    {
-      y: 60,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 2,
-      delay: 0.25,
-      ease: 'power3.out',
+  if (content) {
+    gsap.fromTo(
+      content,
+      {
+        y: 60,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        delay: 0.25,
+        ease: 'power3.out',
 
-      scrollTrigger: {
-        trigger: product,
-        start: 'top 78%',
-        toggleActions: 'play none none reverse',
-        invalidateOnRefresh: true
+        scrollTrigger: {
+          trigger: product,
+          start: 'top 78%',
+          toggleActions: 'play none none reverse',
+          invalidateOnRefresh: true
+        }
       }
-    }
-  )
+    )
+  }
 
 })
 
-window.addEventListener('load', () => {
-  ScrollTrigger.refresh()
-})
 
 // ======================================
-// ANIMACIÓN DE + Y -
+// INGREDIENTES - ACORDEONES
 // ======================================
-
-
-
 
 function initIngredientAccordions() {
-  const ingredients = document.querySelectorAll(".ingredient");
-  
+
+  const ingredients = document.querySelectorAll('.ingredient')
+
   ingredients.forEach((item) => {
-    const summary = item.querySelector(".ingredient__summary");
-    const content = item.querySelector(".ingredient__content");
-    
-    summary.addEventListener("click", (event) => {
-      event.preventDefault();
-      
+
+    const summary = item.querySelector('.ingredient__summary')
+    const content = item.querySelector('.ingredient__content')
+
+    if (!summary || !content) {
+      return
+    }
+
+    summary.addEventListener('click', (event) => {
+
+      event.preventDefault()
+
       if (item.open) {
+
+        // ------------------------------
         // CERRAR
+        // ------------------------------
+
         gsap.to(content, {
           height: 0,
           opacity: 0,
           duration: 0.4,
-          ease: "power2.inOut",
-          
+          ease: 'power2.inOut',
+
           onComplete: () => {
-            item.open = false;
-            
+
+            item.open = false
+
             gsap.set(content, {
-              clearProps: "height,opacity"
-            });
+              clearProps: 'height,opacity'
+            })
+
+            ScrollTrigger.refresh()
           }
-        });
-        
+        })
+
       } else {
+
+        // ------------------------------
         // ABRIR
-        item.open = true;
-        
+        // ------------------------------
+
+        item.open = true
+
         gsap.fromTo(
           content,
           {
@@ -233,64 +251,84 @@ function initIngredientAccordions() {
             opacity: 0
           },
           {
-            height: "auto",
+            height: 'auto',
             opacity: 1,
             duration: 0.45,
-            ease: "power2.out",
-            clearProps: "height"
+            ease: 'power2.out',
+            clearProps: 'height',
+
+            onComplete: () => {
+              ScrollTrigger.refresh()
+            }
           }
-        );
+        )
       }
-    });
-  });
+
+    })
+
+  })
+
 }
+
 
 // ======================================
 // CARGA DE INGREDIENTES
 // ======================================
 
-
 async function loadProducts() {
+
   try {
-    const response = await fetch("/data/products.json");
-    
+
+    const response = await fetch('/data/products.json')
+
     if (!response.ok) {
-      throw new Error(`Error al cargar products.json: ${response.status}`);
+      throw new Error(
+        `Error al cargar products.json: ${response.status}`
+      )
     }
 
-    const products = await response.json();
+    const products = await response.json()
 
-    const list = document.querySelector("#ingredients-list");
+    const list = document.querySelector('#ingredients-list')
 
     if (!list) {
-      console.error("No se encontró #ingredients-list");
-      return;
+      console.error('No se encontró #ingredients-list')
+      return
     }
 
     products.forEach((product, index) => {
-      const number = String(index + 1).padStart(2, "0");
+
+      const number = String(index + 1).padStart(2, '0')
 
       const groupsHTML = product.groups
         .map(
           (group) => `
             <div class="ingredient__group">
               <h4>${group.title}</h4>
-              <p>${group.items.join(", ")}.</p>
+              <p>${group.items.join(', ')}.</p>
             </div>
           `
         )
-        .join("");
+        .join('')
 
-      const ingredient = document.createElement("details");
+      const ingredient = document.createElement('details')
 
-      ingredient.className = "ingredient";
+      ingredient.className = 'ingredient'
 
       ingredient.innerHTML = `
         <summary class="ingredient__summary">
           <div>
-            <span class="ingredient__number">${number}</span>
-            <h3>${product.name}</h3>
-            <p>${product.brand}</p>
+            <span class="ingredient__number">
+              ${number}
+            </span>
+
+            <h3>
+              ${product.name}
+            </h3>
+
+            <p>
+              ${product.brand}
+            </p>
           </div>
 
           <span class="ingredient__plus"></span>
@@ -299,67 +337,154 @@ async function loadProducts() {
         <div class="ingredient__content">
           ${groupsHTML}
         </div>
-      `;
+      `
 
-      list.appendChild(ingredient);
-    });
+      list.appendChild(ingredient)
+    })
 
-    // Ahora que existen los acordeones,
-    // activamos la animación.
-    initIngredientAccordions();
+
+    // Activamos acordeones
+    initIngredientAccordions()
+
+
+    // El contenido cambió de altura.
+    // Recalculamos todos los ScrollTrigger.
+    ScrollTrigger.refresh()
 
   } catch (error) {
-    console.error("No se pudieron cargar los productos:", error);
+
+    console.error(
+      'No se pudieron cargar los productos:',
+      error
+    )
+
   }
+
 }
 
-loadProducts();
 
-const hiddenGemsImage = document.querySelector(
-  '.hidden-gems-sequence__image'
-)
+// ======================================
+// HIDDEN GEMS - APERTURA POR SCROLL
+// ======================================
 
-const hiddenGemsFrames = []
+function initHiddenGemsSequence() {
 
-for (let i = 1; i <= 7; i++) {
-  hiddenGemsFrames.push(
-    `/images/products/calendario-15-${i}.png`
-  )
-}
+  const hiddenGemsProduct =
+    document.querySelector('.hidden-gems-product')
 
-hiddenGemsFrames.forEach((src) => {
-  const img = new Image()
-  img.src = src
-})
+  const hiddenGemsImage =
+    document.querySelector('.hidden-gems-sequence__image')
 
-const hiddenGemsSequence = {
-  frame: 0
-}
 
-gsap.to(hiddenGemsSequence, {
-  frame: hiddenGemsFrames.length - 1,
+  // Si el HTML todavía no tiene alguno
+  // de estos elementos, simplemente no
+  // ejecutamos esta animación.
 
-  ease: 'none',
+  if (!hiddenGemsProduct || !hiddenGemsImage) {
 
-  scrollTrigger: {
-    trigger: '.hidden-gems-product',
+    console.warn(
+      'No se encontraron los elementos de la secuencia Hidden Gems'
+    )
 
-    start: 'top top',
-
-    end: '+=250%',
-
-    scrub: 0.5,
-
-    pin: true,
-
-    markers: false,
-
-    invalidateOnRefresh: true
-  },
-
-  onUpdate: () => {
-    const frame = Math.round(hiddenGemsSequence.frame)
-
-    hiddenGemsImage.src = hiddenGemsFrames[frame]
+    return
   }
+
+
+  // ------------------------------
+  // FRAMES
+  // ------------------------------
+
+  const hiddenGemsFrames = []
+
+  for (let i = 1; i <= 7; i++) {
+
+    hiddenGemsFrames.push(
+      `/images/products/calendario-15-${i}.png`
+    )
+
+  }
+
+
+  // ------------------------------
+  // PRECARGA DE IMÁGENES
+  // ------------------------------
+
+  hiddenGemsFrames.forEach((src) => {
+
+    const img = new Image()
+
+    img.src = src
+
+  })
+
+
+  // ------------------------------
+  // CONTROL DE FRAME
+  // ------------------------------
+
+  const hiddenGemsSequence = {
+    frame: 0
+  }
+
+
+  // ------------------------------
+  // ANIMACIÓN
+  // ------------------------------
+
+  gsap.to(hiddenGemsSequence, {
+
+    frame: hiddenGemsFrames.length - 1,
+
+    ease: 'none',
+
+    scrollTrigger: {
+
+      trigger: hiddenGemsProduct,
+
+      start: 'top top',
+
+      end: '+=250%',
+
+      scrub: 0.5,
+
+      pin: true,
+
+      markers: false,
+
+      invalidateOnRefresh: true
+    },
+
+    onUpdate: () => {
+
+      const frame = Math.round(
+        hiddenGemsSequence.frame
+      )
+
+      hiddenGemsImage.src =
+        hiddenGemsFrames[frame]
+
+    }
+
+  })
+
+}
+
+
+// ======================================
+// INICIALIZACIÓN
+// ======================================
+
+loadProducts()
+
+initHiddenGemsSequence()
+
+
+// ======================================
+// REFRESH FINAL
+// ======================================
+
+window.addEventListener('load', () => {
+
+  ScrollTrigger.refresh()
+
 })
