@@ -10,124 +10,222 @@ const mm = gsap.matchMedia()
 // HERO - DESKTOP
 // ======================================
 
-mm.add('(min-width: 769px)', () => {
 
-  const heroTl = gsap.timeline({
+/* ======================================
+   HERO - PARALLAX POR SCROLL
+====================================== */
+
+const heroMM = gsap.matchMedia()
+
+
+// ======================================
+// DESKTOP
+// ======================================
+
+heroMM.add('(min-width: 769px)', () => {
+
+  initHeroParallax({
+    logoY: -900,
+    girlY: -180,
+    starWhiteY: -120,
+    starPinkY: -240,
+    starBlueY: -65,
+    sloganY: -160
+  })
+
+})
+
+
+// ======================================
+// MOBILE
+// ======================================
+heroMM.add('(max-width: 768px)', () => {
+
+  initHeroParallax({
+    logoY: -650,
+    girlY: -100,
+    starWhiteY: -75,
+    starPinkY: -150,
+    starBlueY: -40,
+    sloganY: -110
+  })
+
+})
+
+// ======================================
+// FUNCIÓN DE ANIMACIÓN
+// ======================================
+function initHeroParallax(config) {
+
+  const hero = document.querySelector('.hero')
+
+  if (!hero) return
+
+  const logo = hero.querySelector('.hero__logo')
+  const girl = hero.querySelector('.hero__girl')
+
+  const starWhite = hero.querySelector('.hero__star--white')
+  const starPink = hero.querySelector('.hero__star--pink')
+  const starBlue = hero.querySelector('.hero__star--blue')
+
+  const slogan = hero.querySelector('.hero__slogan')
+
+  if (!logo || !girl || !starWhite || !starPink || !starBlue || !slogan) {
+    console.warn('Faltan elementos del nuevo hero')
+    return
+  }
+
+  const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: '.hero',
+      trigger: hero,
       start: 'top top',
       end: '+=150%',
       scrub: 1,
       pin: true,
-      markers: false,
-      invalidateOnRefresh: true
+      invalidateOnRefresh: true,
+      markers: false
     }
   })
 
-  heroTl
-    .to('.hero__shape--pink', {
-      x: -220,
-      y: -120,
-      rotation: -25
-    }, 0)
+  // LOGO: sube rápido
+  tl.to(logo, {
+    y: config.logoY,
+    ease: 'none'
+  }, 0)
 
-    .to('.hero__shape--white', {
-      x: 120,
-      y: -180,
-      scale: 1.4
-    }, 0)
+  // CHICA: sube lentamente
+  tl.to(girl, {
+    y: config.girlY,
+    ease: 'none'
+  }, 0)
 
-    .to('.hero__shape--orange-ball', {
-      x: 180,
-      y: 80,
-      scale: 1.3
-    }, 0)
+  // ESTRELLA BLANCA
+  tl.to(starWhite, {
+    y: config.starWhiteY,
+    ease: 'none'
+  }, 0)
 
-    .to('.hero__shape--yellow', {
-      x: -250,
+  // ESTRELLA ROSA
+  tl.to(starPink, {
+    y: config.starPinkY,
+    ease: 'none'
+  }, 0)
+
+  // ESTRELLA AZUL
+  tl.to(starBlue, {
+    y: config.starBlueY,
+    ease: 'none'
+  }, 0)
+
+  // SLOGAN: desaparece al principio
+  tl.to(slogan, {
+    y: config.sloganY,
+    opacity: 0,
+    duration: 0.2,
+    ease: 'none'
+  }, 0)
+  // ======================================
+  // CURVAS - MOVIMIENTOS INDEPENDIENTES
+  // ======================================
+
+  tl.to('.hero__curve--dots-right', {
+    y: -100,
+    ease: 'none'
+  }, 0)
+
+  tl.to('.hero__curve--dots-left', {
+    y: -220,
+    ease: 'none'
+  }, 0)
+
+  tl.to('.hero__curve--right', {
+    y: -350,
+    ease: 'none'
+  }, 0)
+
+  tl.to('.hero__curve--left-one', {
+    y: -180,
+      ease: 'none'
+  }, 0)
+
+  tl.to('.hero__curve--left-two', {
+    y: -90,
+    ease: 'none'
+  }, 0)
+
+  tl.to('.hero__curve--extra', {
+    y: -280,
+    x: -50,
+    ease: 'none'
+  }, 0)
+
+}
+
+
+/* ======================================
+   TREAT YOURSELF - ANIMACIÓN DE ENTRADA
+====================================== */
+
+const adventLaunch = document.querySelector('.advent-launch')
+
+if (adventLaunch) {
+
+  const adventGirl = adventLaunch.querySelector('.advent-launch__girl')
+
+  const calendar12 = adventLaunch.querySelector(
+    '.advent-launch__calendar--12'
+  )
+
+  const calendar24 = adventLaunch.querySelector(
+    '.advent-launch__calendar--24'
+  )
+
+  if (adventGirl && calendar12 && calendar24) {
+
+    const adventTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: adventLaunch,
+        start: 'top 75%',
+        once: true,
+        markers: false
+      }
+    })
+
+    // MODELO: entra desde abajo
+
+    adventTL.from(adventGirl, {
       y: 180,
-      rotation: -20
-    }, 0)
+      autoAlpha: 0,
+      duration: 1.3,
+      ease: 'power3.out'
+    })
 
-    .to('.hero__shape--orange-line', {
-      x: 250,
-      y: 160,
-      rotation: 20
-    }, 0)
+    // CALENDARIO 12: aparece desde la izquierda
 
-    .to('.hero__shape--orange', {
-      x: 300,
-      y: -100,
-      rotation: 15
-    }, 0)
-
-    .to('.hero h1', {
-      scale: 1.15
-    }, 0)
-
-})
-
-
-// ======================================
-// HERO - MOBILE
-// ======================================
-
-mm.add('(max-width: 768px)', () => {
-
-  const heroTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
-      end: '+=100%',
-      scrub: 1,
-      pin: true,
-      markers: false,
-      invalidateOnRefresh: true
-    }
-  })
-
-  heroTl
-    .to('.hero__shape--pink', {
-      x: -50,
-      y: -70,
-      rotation: -15
-    }, 0)
-
-    .to('.hero__shape--white', {
-      x: 30,
-      y: -60,
-      scale: 1.2
-    }, 0)
-
-    .to('.hero__shape--orange-ball', {
-      x: 50,
-      y: 30,
-      scale: 1.15
-    }, 0)
-
-    .to('.hero__shape--yellow', {
-      x: -60,
-      y: 80,
-      rotation: -12
-    }, 0)
-
-    .to('.hero__shape--orange-line', {
-      x: 60,
+    adventTL.from(calendar12, {
+      x: -120,
       y: 70,
-      rotation: 12
-    }, 0)
+      scale: 0.75,
+      autoAlpha: 0,
+      duration: 1,
+      ease: 'back.out(1.4)'
+    }, '-=0.5')
 
-    .to('.hero__shape--orange', {
-      x: 70,
-      y: -50,
-      rotation: 8
-    }, 0)
+    // CALENDARIO 24: aparece desde la derecha
 
-    .to('.hero h1', {
-      scale: 1.06
-    }, 0)
+    adventTL.from(calendar24, {
+      x: 120,
+      y: 70,
+      scale: 0.75,
+      autoAlpha: 0,
+      duration: 1,
+      ease: 'back.out(1.4)'
+    }, '<')
 
-})
+  }
+}
+
+
 
 
 // ======================================
