@@ -713,13 +713,13 @@ body {
     min-height: 550px;
   }
   .hero__logo {
-    width: 115%;
+    width: 90%;
     max-width: none;
     top: 68%;
   }
   .hero__girl {
-    height: 75%;
-    max-width: 110%;
+    height: 70%;
+    max-width: 100%;
   }
   .hero__star {
     width: clamp(35px, 11vw, 70px);
@@ -774,15 +774,28 @@ body {
 }
 @media (max-width: 480px) {
   .hero__logo {
-    width: 135%;
-    top: 67%;
+    width: 90%;
+    max-width: none;
+    left: 5%;
+    right: auto;
+    top: auto;
+    bottom: 24%;
+    transform: none;
   }
   .hero__girl {
-    height: 70%;
+    position: absolute;
+    height: 60%;
+    width: auto;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    transform: none;
   }
   .hero__slogan {
     width: 170px;
-    top: 10%;
+    top: 25%;
   }
   .hero__star--white {
     left: 7%;
