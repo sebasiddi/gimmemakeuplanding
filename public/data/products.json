@@ -42,7 +42,6 @@
       "legajo": "2557"
     }
   },
-
   {
     "id": "tei-matte-lipstick",
     "name": "Matte Lipstick",
@@ -79,7 +78,6 @@
       "legajo": "2383"
     }
   },
-
   {
     "id": "pink21-lip-gloss",
     "name": "Lip Gloss",
@@ -121,7 +119,6 @@
       "legajo": "2557"
     }
   },
-
   {
     "id": "mely-lip-balm",
     "name": "Lip Balm",
@@ -162,7 +159,6 @@
       "legajo": "2383"
     }
   },
-
   {
     "id": "tei-polvo-de-hadas",
     "name": "Polvo de Hadas",
@@ -197,7 +193,6 @@
       "legajo": "2383"
     }
   },
-
   {
     "id": "tei-mascarilla-hidratante",
     "name": "Mascarilla Hidratante",
@@ -225,7 +220,6 @@
       "legajo": "2383"
     }
   },
-
   {
     "id": "pink21-roll-and-glow-highlighter",
     "name": "Roll & Glow Highlighter",
@@ -271,7 +265,6 @@
       "legajo": "2557"
     }
   },
-
   {
     "id": "tejar-lip-balm",
     "name": "Lip Balm",
@@ -312,7 +305,6 @@
       "legajo": "2557"
     }
   },
-
   {
     "id": "mely-lip-gloss",
     "name": "Lip Gloss",
@@ -350,7 +342,6 @@
       "legajo": "2383"
     }
   },
-
   {
     "id": "tei-matte-lip-gloss",
     "name": "Matte Lip Gloss",
@@ -387,7 +378,6 @@
       "legajo": "2383"
     }
   },
-
   {
     "id": "tei-color-change-lip-balm",
     "name": "Color Change Lip Balm",
@@ -423,7 +413,6 @@
       "legajo": "2383"
     }
   },
-
   {
     "id": "pink21-sparks-palette",
     "name": "Sparks Eyeshadow + Highlighter + Glitter",
@@ -488,6 +477,700 @@
       "resolution": "155/98",
       "legajo": "2557"
     }
+  },
+  {
+    "id": "pink21-pinky-mascara",
+    "name": "Pinky Curva & Volumen Máscara",
+    "brand": "Pink 21",
+    "category": "Máscara de pestañas",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Water",
+          "Beeswax",
+          "Carnauba Wax",
+          "Polyvinylpyrrolidone",
+          "Promulgen D",
+          "Stearic Acid",
+          "Propylene Glycol",
+          "Propylparaben",
+          "Phenoxyethanol",
+          "Methylparaben"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77266"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "pink21-perfect-finish-marker-eyeliner",
+    "name": "Perfect Finish Black Marker Eyeliner",
+    "brand": "Pink 21",
+    "category": "Delineador de ojos",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Trimethylsiloxysilicate",
+          "Cyclopentasiloxane",
+          "Isododecane",
+          "Ceresin",
+          "3-Octylheptamethyltrisiloxane",
+          "Synthetic Fluorphlogopite",
+          "Disteardimonium Hectorite",
+          "Talc",
+          "Boron Calcium Oxide",
+          "Propylene Carbonate",
+          "Isobutylparaben",
+          "Stannous Oxide"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "tei-beeswax-vaseline-lip-balm",
+    "name": "Beeswax Vaseline Lip Balm",
+    "brand": "TEI Cosmética",
+    "category": "Bálsamo labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Ethylhexyl Palmitate",
+          "Beeswax",
+          "Mineral Oil",
+          "Ozokerite",
+          "Petrolatum",
+          "Synthetic Candelilla Wax",
+          "Tocopherol",
+          "Fragrance",
+          "Methylparaben",
+          "Propylparaben"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+  {
+    "id": "dapop-classic-palette",
+    "name": "Classic Palette",
+    "brand": "Dapop",
+    "category": "Paleta de sombras",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Talc",
+          "Mica",
+          "Magnesium Stearate",
+          "Polyethylene",
+          "Ethylhexyl Palmitate",
+          "Petrolatum",
+          "Mineral Oil",
+          "Phenoxyethanol"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77019",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499",
+          "CI 16035"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2995"
+    }
+  },
+  {
+    "id": "mely-soft-glow-highlighter",
+    "name": "Soft Glow Highlighter",
+    "brand": "Mely Beauty",
+    "category": "Iluminador",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Mica",
+          "Mineral Oil",
+          "Ethylhexyl Palmitate",
+          "Magnesium Stearate",
+          "Polyethylene",
+          "Dimethicone",
+          "Polyisobutene",
+          "Phenoxyethanol"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 77491"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+  {
+    "id": "pink21-blush-liquid",
+    "name": "Blush Liquid",
+    "brand": "Pink 21",
+    "category": "Rubor líquido",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Water",
+          "Cyclopentasiloxane",
+          "Neopentyl Glycol Diheptanoate",
+          "Cetyl PEG/PPG-10/1 Dimethicone",
+          "Ethylhexyl Palmitate",
+          "Carbomer",
+          "Phenoxyethanol",
+          "Bentonite",
+          "Triethanolamine",
+          "Propylene Carbonate"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499",
+          "CI 16035"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "tei-pore-refiner-primer",
+    "name": "Pore Refiner Primer",
+    "brand": "TEI Cosmética",
+    "category": "Primer facial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Water",
+          "Propylene Glycol",
+          "Glycerin",
+          "Tocopherol",
+          "Carbomer",
+          "Triethanolamine",
+          "Sodium Hyaluronate",
+          "Methylparaben",
+          "Fragrance"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+  {
+    "id": "4angels-lip-gloss-ar1149",
+    "name": "Brillo Labial AR1149",
+    "brand": "4 Angels",
+    "category": "Brillo labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Isododecane",
+          "Acrylates/VA Copolymer",
+          "Mica",
+          "Butylene/Ethylene/Styrene Copolymer",
+          "Microcrystalline Wax",
+          "Silica Dimethyl Silylate",
+          "Phenoxyethanol",
+          "BHT"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 19140",
+          "CI 77492",
+          "CI 42090",
+          "CI 77891",
+          "CI 77499",
+          "CI 15850",
+          "CI 16035",
+          "CI 75470",
+          "CI 77491",
+          "CI 45410",
+          "CI 77742"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "tei-skin-essence-apple",
+    "name": "Skin Essence Apple (Hyaluronic Acid & Niacinamide)",
+    "brand": "TEI Cosmética",
+    "category": "Sérum facial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Water",
+          "Propylene Glycol",
+          "Alpha-Arbutin",
+          "Niacinamide",
+          "Ascorbic Acid",
+          "Tocopherol",
+          "Xanthan Gum",
+          "Centella Asiatica Extract",
+          "Sodium Hyaluronate",
+          "Phenoxyethanol",
+          "Fragrance"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 45380"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "3152"
+    }
+  },
+  {
+    "id": "pink21-studio-stick-contour",
+    "name": "Studio Stick Contour Cream",
+    "brand": "Pink 21",
+    "category": "Contorno en crema",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Paraffinum Liquidum",
+          "Ethylhexyl Palmitate",
+          "Ceresin",
+          "Beeswax",
+          "Caprylic/Capric Triglyceride",
+          "Adeps Lanae",
+          "Resin",
+          "PE-Wax",
+          "Methylparaben",
+          "Propylparaben",
+          "BHT"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77019",
+          "CI 77891",
+          "CI 16035",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "4angels-angel-era-lipliner",
+    "name": "Angel Era Delineador de Labios",
+    "brand": "4 Angels",
+    "category": "Delineador de labios",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Ethylhexyl Palmitate",
+          "Ceresin",
+          "Microcrystalline Wax",
+          "Tridecyl Trimellitate",
+          "Polyisobutene",
+          "Paraffinum Liquidum",
+          "Polyethylene",
+          "Bis-Diglyceryl Polyacyladipate-2",
+          "Sorbitan Sesquioleate",
+          "Methylparaben",
+          "Propylparaben",
+          "BHT"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499",
+          "CI 15850",
+          "CI 45410",
+          "CI 19140",
+          "CI 42090",
+          "CI 16035"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "pink21-perfect-finish-lipliner",
+    "name": "Perfect Finish Lip Liner Matte",
+    "brand": "Pink 21",
+    "category": "Delineador de labios",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Ethylhexyl Palmitate",
+          "Ceresin",
+          "Tridecyl Trimellitate",
+          "Adeps Lanae",
+          "Polybutene",
+          "PE-Wax",
+          "Microcrystalline Wax",
+          "Methylparaben",
+          "Propylparaben",
+          "BHT"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 15850",
+          "CI 45410",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "tei-nose-pack",
+    "name": "Nose Pack Mascarilla para Puntos Negros",
+    "brand": "TEI",
+    "category": "Mascarilla para nariz",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Water",
+          "Polyvinyl Alcohol",
+          "Alcohol",
+          "Parfum",
+          "Benzyl Alcohol",
+          "Phenoxyethanol",
+          "Benzoic Acid",
+          "Triethanolamine",
+          "Carbomer",
+          "Allantoin",
+          "Methylparaben",
+          "PEG-40 Hydrogenated Castor Oil",
+          "Aqua",
+          "Butylene Glycol",
+          "Hamamelis Virginiana (Witch Hazel) Extract"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77266"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+  {
+    "id": "citygirl-here-we-glow-translucent-powder",
+    "name": "Here We Glow Polvo Traslúcido",
+    "brand": "City Girl",
+    "category": "Polvo traslúcido",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Talc",
+          "Aluminum Starch Octenylsuccinate",
+          "Mica",
+          "Magnesium Stearate",
+          "Silica",
+          "Methyl Methacrylate Crosspolymer",
+          "Phenoxyethanol",
+          "Isopropyl Myristate",
+          "Ethylhexylglycerin",
+          "Triethoxycaprylylsilane"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+  {
+    "id": "saniye-transparent-eyebrow-gel",
+    "name": "Gel para Cejas Transparente Invisible Finish",
+    "brand": "Saniye",
+    "category": "Gel para cejas",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Aqua",
+          "PVP",
+          "Glycerin",
+          "Phenoxyethanol"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "3008"
+    }
+  },
+  {
+    "id": "4angels-lip-oil-ar1207",
+    "name": "Lip Oil con Llavero",
+    "brand": "4 Angels",
+    "category": "Aceite labial",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Paraffinum Liquidum",
+          "Ethylhexyl Palmitate",
+          "Ethylene/Propylene/Styrene Copolymer",
+          "Polybutene",
+          "Phenoxyethanol"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 17200",
+          "CI 19140",
+          "CI 42090",
+          "CI 45410"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "pink21-eyebrow-pencil-2in1",
+    "name": "Eyebrow Pencil 2 in 1",
+    "brand": "Pink 21",
+    "category": "Lápiz para cejas",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Microcrystalline Wax",
+          "Polyethylene",
+          "Petrolatum",
+          "Ricinus Communis (Castor) Seed Oil",
+          "Synthetic Wax",
+          "Pentaerythrityl Tetratetracoate",
+          "Ozokerite",
+          "Ethylhexyl Palmitate",
+          "Paraffin Wax",
+          "Glycol Montanate",
+          "Synthetic Wax",
+          "Bis-Diglyceryl Polyacyladipate-2",
+          "Octyldodecanol",
+          "Phenoxyethanol",
+          "Iron Oxides (CI 77499)",
+          "D&C Black No. 2 (CI 77266)"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "tei-ella-tint-liptint",
+    "name": "Ella Tint Lip Tint",
+    "brand": "TEI Cosmética",
+    "category": "Tinta para labios",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Water",
+          "Styrene/Acrylates Copolymer",
+          "Butylene Glycol",
+          "Carbomer",
+          "Glycerin",
+          "Sodium Hyaluronate",
+          "Tocopherol",
+          "Phenoxyethanol",
+          "Fragrance"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 17200",
+          "CI 15985",
+          "CI 16035",
+          "CI 45380"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2383"
+    }
+  },
+  {
+    "id": "rubyrose-feels-matte-lips",
+    "name": "Feels Matte Lips (Velvet Lipstick y Liquid Lipstick)",
+    "brand": "Ruby Rose",
+    "category": "Labial líquido y en barra",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Labial en barra (Velvet Lipstick)",
+        "items": [
+          "Caprylic/Capric Triglyceride",
+          "Cyclopentasiloxane",
+          "Dimethicone",
+          "Cyclotetrasiloxane",
+          "Synthetic Wax",
+          "Isononyl Isononanoate",
+          "Cyclohexasiloxane",
+          "Mica",
+          "Ethylhexyl Palmitate",
+          "Microcrystalline Wax",
+          "Parfum"
+        ]
+      },
+      {
+        "title": "Puede contener - Labial en barra",
+        "items": [
+          "CI 77491",
+          "CI 77499",
+          "CI 45410",
+          "CI 15850",
+          "CI 77492",
+          "CI 16035",
+          "CI 42090",
+          "CI 77742",
+          "CI 77891",
+          "CI 19140",
+          "CI 75470"
+        ]
+      },
+      {
+        "title": "Labial líquido (Liquid Lipstick)",
+        "items": [
+          "Isododecane",
+          "Mica",
+          "Octyldodecanol",
+          "Ethylene/Propylene/Styrene Copolymer",
+          "Glyceryl Behenate/Eicosadioate",
+          "Trimethylsiloxysilicate",
+          "Parfum",
+          "Sodium Sulfate"
+        ]
+      },
+      {
+        "title": "Puede contener - Labial líquido",
+        "items": [
+          "Mica",
+          "Sodium Chloride",
+          "CI 77499",
+          "CI 77492",
+          "CI 15850",
+          "CI 45410",
+          "CI 42090",
+          "CI 19140",
+          "CI 77891",
+          "CI 77491",
+          "CI 77492",
+          "CI 75470"
+        ]
+      }
+    ],
+    "verification_note": "Envase combinado con Velvet Lipstick y Liquid Lipstick: se conservan ambas listas de ingredientes y pigmentos por separado. Transcripción provisional de letra pequeña (IMG_9415.jpeg); corroborar con etiqueta. No consta legajo ANMAT argentino en las fotos."
   }
 ]
-
