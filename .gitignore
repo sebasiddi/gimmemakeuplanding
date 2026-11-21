@@ -24,3 +24,5 @@ src/scss/
 *.njsproj
 *.sln
 *.sw?
+# Contexto de desarrollo de GimmeMakeUp
+CONTEXTO*.md
