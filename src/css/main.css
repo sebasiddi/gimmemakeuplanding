@@ -50,7 +50,7 @@ body {
 }
 .navbar__nav a {
   position: relative;
-  color: #111;
+  color: #848484;
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
@@ -387,6 +387,8 @@ body {
   bottom: -15%;
   transform: translateX(-50%);
   pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
 }
 .advent-launch__calendar {
   position: absolute;
@@ -504,12 +506,13 @@ body {
   }
   .advent-launch__curve--left-top {
     width: 70%;
-    left: -15%;
+    left: auto;
+    right: 0;
     top: -2%;
   }
   .advent-launch__curve--right-bottom {
     width: 75%;
-    right: -20%;
+    right: 20%;
     bottom: 0;
   }
   .advent-launch__curve--dots {
@@ -595,7 +598,7 @@ body {
 }
 .hero__girl {
   position: absolute;
-  z-index: 4;
+  z-index: 40;
   height: 90%;
   width: auto;
   max-width: 95%;
@@ -605,6 +608,7 @@ body {
   transform: translateX(-50%);
   pointer-events: none;
   will-change: transform;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
 }
 .hero__star {
   position: absolute;
@@ -656,6 +660,258 @@ body {
   left: -12%;
   bottom: 8%;
 }
+.hero {
+  /* ======================================
+     HERO GIMMEMAKEUP
+  ====================================== */
+}
+.hero .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 600px;
+  background: #000;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero .hero__composition {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+}
+.hero .hero__logo {
+  position: absolute;
+  z-index: 2;
+  width: 82%;
+  max-width: 1250px;
+  height: auto;
+  left: 50%;
+  top: 72%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  will-change: transform;
+}
+.hero .hero__girl {
+  position: absolute;
+  z-index: 4;
+  height: 90%;
+  width: auto;
+  max-width: 95%;
+  object-fit: contain;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+  will-change: transform;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
+}
+.hero .hero__star {
+  position: absolute;
+  z-index: 3;
+  width: clamp(45px, 7vw, 110px);
+  height: auto;
+  pointer-events: none;
+  will-change: transform;
+}
+.hero .hero__star--white {
+  left: 28%;
+  top: 35%;
+}
+.hero .hero__star--pink {
+  right: 18%;
+  top: 30%;
+}
+.hero .hero__star--blue {
+  right: 12%;
+  top: 55%;
+  width: clamp(35px, 5vw, 75px);
+}
+.hero .hero__slogan {
+  position: absolute;
+  z-index: 5;
+  width: clamp(160px, 22vw, 320px);
+  height: auto;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.hero .hero__curve {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  height: auto;
+  pointer-events: none;
+  will-change: transform;
+}
+.hero .hero__curve--dots-right {
+  width: 42%;
+  right: -10%;
+  top: -12%;
+}
+.hero .hero__curve--dots-left {
+  width: 40%;
+  left: -12%;
+  bottom: 8%;
+}
+.hero .hero__curve--right {
+  width: 52%;
+  right: -7%;
+  top: 8%;
+}
+.hero .hero__curve--left-one {
+  width: 48%;
+  left: 0;
+  top: -10%;
+}
+.hero .hero__curve--left-two {
+  width: 36%;
+  left: 0;
+  bottom: -8%;
+}
+.hero .hero__curve--extra {
+  width: 45%;
+  right: -18%;
+  top: 15%;
+}
+@media (max-width: 1024px) {
+  .hero .hero__logo {
+    width: 95%;
+  }
+  .hero .hero__girl {
+    height: 85%;
+  }
+  .hero .hero__star--white {
+    left: 16%;
+  }
+  .hero .hero__star--pink {
+    right: 12%;
+  }
+  .hero .hero__curve--dots-right {
+    width: 55%;
+  }
+  .hero .hero__curve--dots-left {
+    width: 50%;
+  }
+  .hero .hero__curve--right {
+    width: 65%;
+  }
+  .hero .hero__curve--left-one {
+    width: 60%;
+  }
+  .hero .hero__curve--left-two {
+    width: 45%;
+  }
+  .hero .hero__curve--extra {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  .hero .hero {
+    min-height: 550px;
+  }
+  .hero .hero__logo {
+    width: 90%;
+    max-width: none;
+    top: 68%;
+  }
+  .hero .hero__girl {
+    height: 70%;
+    max-width: 100%;
+  }
+  .hero .hero__star {
+    width: clamp(35px, 11vw, 70px);
+  }
+  .hero .hero__star--white {
+    left: 10%;
+    top: 28%;
+  }
+  .hero .hero__star--pink {
+    right: 8%;
+    top: 24%;
+  }
+  .hero .hero__star--blue {
+    right: 8%;
+    top: 60%;
+    width: clamp(30px, 9vw, 55px);
+  }
+  .hero .hero__slogan {
+    width: clamp(150px, 45vw, 240px);
+    top: 8%;
+  }
+  .hero .hero__curve--dots-right {
+    width: 80%;
+    right: -35%;
+    top: -5%;
+  }
+  .hero .hero__curve--dots-left {
+    width: 75%;
+    left: -35%;
+    bottom: 15%;
+  }
+  .hero .hero__curve--right {
+    width: 95%;
+    right: -55%;
+    top: 15%;
+  }
+  .hero .hero__curve--left-one {
+    width: 90%;
+    left: -50%;
+    top: 0;
+  }
+  .hero .hero__curve--left-two {
+    width: 70%;
+    left: -40%;
+    bottom: 0;
+  }
+  .hero .hero__curve--extra {
+    width: 85%;
+    right: -50%;
+    bottom: -5%;
+  }
+}
+@media (max-width: 480px) {
+  .hero .hero__logo {
+    width: 90%;
+    max-width: none;
+    left: 5%;
+    right: auto;
+    top: auto;
+    bottom: 24%;
+    transform: none;
+  }
+  .hero .hero__girl {
+    height: 60%;
+    width: auto;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    transform: none;
+  }
+  .hero .hero__slogan {
+    width: 170px;
+    top: 25%;
+  }
+  .hero .hero__star--white {
+    left: 7%;
+    top: 32%;
+  }
+  .hero .hero__star--pink {
+    right: 6%;
+    top: 30%;
+  }
+  .hero .hero__star--blue {
+    right: 6%;
+    top: 58%;
+  }
+}
 .hero__curve--right {
   width: 52%;
   right: -7%;
@@ -670,6 +926,21 @@ body {
   width: 36%;
   left: 0;
   bottom: -8%;
+}
+.hero__curve--left-two__girl {
+  position: absolute;
+  z-index: 40;
+  height: 90%;
+  width: auto;
+  max-width: 95%;
+  object-fit: contain;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+  will-change: transform;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
 }
 .hero__curve--extra {
   width: 45%;
