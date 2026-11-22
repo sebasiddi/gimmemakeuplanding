@@ -398,45 +398,47 @@ async function loadProducts() {
 
       const number = String(index + 1).padStart(2, '0')
 
-      const groupsHTML = product.groups
-        .map(
-          (group) => `
-            <div class="ingredient__group">
-              <h4>${group.title}</h4>
-              <p>${group.items.join(', ')}.</p>
-            </div>
-          `
-        )
-        .join('')
-
       const ingredient = document.createElement('details')
-
       ingredient.className = 'ingredient'
 
-      ingredient.innerHTML = `
-        <summary class="ingredient__summary">
-          <div>
-            <span class="ingredient__number">
-              ${number}
-            </span>
+      const summary = document.createElement('summary')
+      summary.className = 'ingredient__summary'
 
-            <h3>
-              ${product.name}
-            </h3>
+      const label = document.createElement('div')
+      const numberLabel = document.createElement('span')
+      numberLabel.className = 'ingredient__number'
+      numberLabel.textContent = number
 
-            <p>
-              ${product.brand}
-            </p>
-          </div>
+      const name = document.createElement('h3')
+      name.textContent = product.name
 
-          <span class="ingredient__plus"></span>
-        </summary>
+      const brand = document.createElement('p')
+      brand.textContent = product.brand
 
-        <div class="ingredient__content">
-          ${groupsHTML}
-        </div>
-      `
+      const plus = document.createElement('span')
+      plus.className = 'ingredient__plus'
 
+      label.append(numberLabel, name, brand)
+      summary.append(label, plus)
+
+      const content = document.createElement('div')
+      content.className = 'ingredient__content'
+
+      product.groups.forEach((group) => {
+        const groupElement = document.createElement('div')
+        groupElement.className = 'ingredient__group'
+
+        const title = document.createElement('h4')
+        title.textContent = group.title
+
+        const items = document.createElement('p')
+        items.textContent = `${group.items.join(', ')}.`
+
+        groupElement.append(title, items)
+        content.append(groupElement)
+      })
+
+      ingredient.append(summary, content)
       list.appendChild(ingredient)
     })
 
