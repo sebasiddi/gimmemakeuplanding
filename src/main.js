@@ -439,6 +439,14 @@ function initHiddenGemsSequence() {
 
 initHiddenGemsSequence()
 
+document.querySelectorAll('a.product__image').forEach((link) => {
+  link.addEventListener('click', () => {
+    window.gtag?.('event', 'product_image_click', {
+      product_name: link.querySelector('img')?.alt,
+    })
+  })
+})
+
 
 // ======================================
 // REFRESH FINAL
