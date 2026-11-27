@@ -1,0 +1,20 @@
+@media (prefers-reduced-motion: no-preference) {
+  .hero__curve--dots-right,
+  .hero__curve--dots-left {
+    animation: hero-dots-glow 8s ease-in-out infinite;
+  }
+
+  .hero__curve--dots-left {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes hero-dots-glow {
+  0%, 16%, 100% {
+    filter: brightness(1) drop-shadow(0 0 0 transparent);
+  }
+
+  8% {
+    filter: brightness(1.25) drop-shadow(0 0 7px rgb(255 236 250 / 85%));
+  }
+}

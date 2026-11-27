@@ -17,6 +17,43 @@ const mm = gsap.matchMedia()
 
 const heroMM = gsap.matchMedia()
 
+heroMM.add('(prefers-reduced-motion: no-preference)', () => {
+  const stopTwinkles = gsap.utils.toArray('.hero__star, .hero__logo').map((element) => {
+    const isLogo = element.matches('.hero__logo')
+    const peak = isLogo
+      ? 'brightness(1.65) drop-shadow(0 0 8px rgb(255 240 252 / 95%)) drop-shadow(0 0 22px rgb(255 105 209 / 85%))'
+      : 'brightness(1.45) drop-shadow(0 0 9px rgb(255 236 250 / 90%))'
+    const delay = isLogo ? [4000, 8000] : [2000, 7000]
+    let timer
+    let glow
+
+    function scheduleTwinkle() {
+      timer = window.setTimeout(() => {
+        const resting = 'brightness(1) drop-shadow(0 0 0 transparent)'
+        glow = element.animate([
+          { filter: resting },
+          { filter: peak, offset: isLogo ? 0.35 : 0.5 },
+          ...(isLogo ? [{ filter: peak, offset: 0.6 }] : []),
+          { filter: resting },
+        ], {
+          duration: isLogo ? 1900 : 950,
+          easing: 'ease-in-out',
+        })
+        scheduleTwinkle()
+      }, gsap.utils.random(...delay))
+    }
+
+    scheduleTwinkle()
+
+    return () => {
+      window.clearTimeout(timer)
+      glow?.cancel()
+    }
+  })
+
+  return () => stopTwinkles.forEach((stop) => stop())
+})
+
 
 // ======================================
 // DESKTOP
