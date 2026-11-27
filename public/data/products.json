@@ -4,6 +4,7 @@
     "name": "Paleta de sombras LOOK",
     "brand": "TEI Makeup",
     "category": "Paleta de sombras",
+    "family": "Ojos",
     "status": "current",
     "groups": [
       {
@@ -47,6 +48,7 @@
     "name": "Matte Lipstick",
     "brand": "TEI Cosmética",
     "category": "Labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -83,6 +85,7 @@
     "name": "Lip Gloss",
     "brand": "Pink 21",
     "category": "Brillo labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -124,6 +127,7 @@
     "name": "Lip Balm",
     "brand": "Mely Beauty",
     "category": "Bálsamo labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -164,6 +168,7 @@
     "name": "Polvo de Hadas",
     "brand": "TEI",
     "category": "Highlight Powder",
+    "family": "Rostro",
     "status": "current",
     "groups": [
       {
@@ -198,6 +203,7 @@
     "name": "Mascarilla Hidratante",
     "brand": "TEI",
     "category": "Mascarilla facial",
+    "family": "Cuidado de la piel",
     "status": "current",
     "groups": [
       {
@@ -225,6 +231,7 @@
     "name": "Roll & Glow Highlighter",
     "brand": "Pink 21",
     "category": "Iluminador líquido",
+    "family": "Rostro",
     "status": "current",
     "groups": [
       {
@@ -270,6 +277,7 @@
     "name": "Lip Balm",
     "brand": "Tejar Makeup",
     "category": "Bálsamo labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -310,6 +318,7 @@
     "name": "Lip Gloss",
     "brand": "Mely Beauty",
     "category": "Brillo labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -347,6 +356,7 @@
     "name": "Matte Lip Gloss",
     "brand": "TEI",
     "category": "Brillo labial matte",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -383,6 +393,7 @@
     "name": "Color Change Lip Balm",
     "brand": "TEI Cosmética",
     "category": "Bálsamo labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -418,6 +429,7 @@
     "name": "Sparks Eyeshadow + Highlighter + Glitter",
     "brand": "Pink 21",
     "category": "Paleta de sombras, iluminador y glitter",
+    "family": "Ojos",
     "status": "current",
     "groups": [
       {
@@ -483,6 +495,7 @@
     "name": "Pinky Curva & Volumen Máscara",
     "brand": "Pink 21",
     "category": "Máscara de pestañas",
+    "family": "Ojos",
     "status": "current",
     "groups": [
       {
@@ -517,6 +530,7 @@
     "name": "Perfect Finish Black Marker Eyeliner",
     "brand": "Pink 21",
     "category": "Delineador de ojos",
+    "family": "Ojos",
     "status": "current",
     "groups": [
       {
@@ -553,6 +567,7 @@
     "name": "Beeswax Vaseline Lip Balm",
     "brand": "TEI Cosmética",
     "category": "Bálsamo labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -581,6 +596,7 @@
     "name": "Classic Palette",
     "brand": "Dapop",
     "category": "Paleta de sombras",
+    "family": "Ojos",
     "status": "current",
     "groups": [
       {
@@ -617,6 +633,7 @@
     "name": "Soft Glow Highlighter",
     "brand": "Mely Beauty",
     "category": "Iluminador",
+    "family": "Rostro",
     "status": "current",
     "groups": [
       {
@@ -650,6 +667,7 @@
     "name": "Blush Liquid",
     "brand": "Pink 21",
     "category": "Rubor líquido",
+    "family": "Rostro",
     "status": "current",
     "groups": [
       {
@@ -688,6 +706,7 @@
     "name": "Pore Refiner Primer",
     "brand": "TEI Cosmética",
     "category": "Primer facial",
+    "family": "Rostro",
     "status": "current",
     "groups": [
       {
@@ -715,6 +734,7 @@
     "name": "Brillo Labial AR1149",
     "brand": "4 Angels",
     "category": "Brillo labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -757,6 +777,7 @@
     "name": "Skin Essence Apple (Hyaluronic Acid & Niacinamide)",
     "brand": "TEI Cosmética",
     "category": "Sérum facial",
+    "family": "Cuidado de la piel",
     "status": "current",
     "groups": [
       {
@@ -792,6 +813,7 @@
     "name": "Studio Stick Contour Cream",
     "brand": "Pink 21",
     "category": "Contorno en crema",
+    "family": "Rostro",
     "status": "current",
     "groups": [
       {
@@ -832,6 +854,7 @@
     "name": "Angel Era Delineador de Labios",
     "brand": "4 Angels",
     "category": "Delineador de labios",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -876,6 +899,7 @@
     "name": "Perfect Finish Lip Liner Matte",
     "brand": "Pink 21",
     "category": "Delineador de labios",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -915,6 +939,7 @@
     "name": "Nose Pack Mascarilla para Puntos Negros",
     "brand": "TEI",
     "category": "Mascarilla para nariz",
+    "family": "Cuidado de la piel",
     "status": "current",
     "groups": [
       {
@@ -954,6 +979,7 @@
     "name": "Here We Glow Polvo Traslúcido",
     "brand": "City Girl",
     "category": "Polvo traslúcido",
+    "family": "Rostro",
     "status": "current",
     "groups": [
       {
@@ -982,6 +1008,7 @@
     "name": "Gel para Cejas Transparente Invisible Finish",
     "brand": "Saniye",
     "category": "Gel para cejas",
+    "family": "Ojos",
     "status": "current",
     "groups": [
       {
@@ -1004,6 +1031,7 @@
     "name": "Lip Oil con Llavero",
     "brand": "4 Angels",
     "category": "Aceite labial",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -1036,6 +1064,7 @@
     "name": "Eyebrow Pencil 2 in 1",
     "brand": "Pink 21",
     "category": "Lápiz para cejas",
+    "family": "Ojos",
     "status": "current",
     "groups": [
       {
@@ -1070,6 +1099,7 @@
     "name": "Ella Tint Lip Tint",
     "brand": "TEI Cosmética",
     "category": "Tinta para labios",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -1106,6 +1136,7 @@
     "name": "Feels Matte Lips (Velvet Lipstick y Liquid Lipstick)",
     "brand": "Ruby Rose",
     "category": "Labial líquido y en barra",
+    "family": "Labios",
     "status": "current",
     "groups": [
       {
@@ -1172,5 +1203,225 @@
       }
     ],
     "verification_note": "Envase combinado con Velvet Lipstick y Liquid Lipstick: se conservan ambas listas de ingredientes y pigmentos por separado. Transcripción provisional de letra pequeña (IMG_9415.jpeg); corroborar con etiqueta. No consta legajo ANMAT argentino en las fotos."
+  },
+  {
+    "id": "pink21-loose-powder-matte-finish",
+    "name": "Loose Powder Matte Finish",
+    "brand": "Pink 21",
+    "category": "Polvo traslúcido",
+    "family": "Rostro",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Paraffinum Liquidum",
+          "Ethylhexyl Palmitate",
+          "Ceresin",
+          "Beeswax",
+          "Caprylic/Capric",
+          "Adeps Lanae",
+          "Resin",
+          "PE-Wax",
+          "Methylparaben",
+          "Propylparaben",
+          "BHT"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77491",
+          "CI 77492",
+          "CI 77019",
+          "CI 77891",
+          "CI 16035",
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "4angels-lip-oil-heart-charm-ar1206",
+    "name": "Lip Oil Heart Charm",
+    "brand": "4 Angels",
+    "category": "Aceite labial con dije",
+    "family": "Labios",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Paraffinum Liquidum",
+          "Ethylhexyl Palmitate",
+          "Ethylene/Propylene/Styrene Copolymer",
+          "Polybutene",
+          "Phenoxyethanol"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 17200",
+          "CI 19140",
+          "CI 42090",
+          "CI 45410"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "pink21-golden-collection-lip-liner",
+    "name": "Golden Collection Lip Liner",
+    "brand": "Pink 21",
+    "category": "Delineador de labios",
+    "family": "Labios",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Ethylhexyl Palmitate",
+          "Ceresin",
+          "Tridecyl Trimellitate",
+          "Adeps Lanae",
+          "Polybutene",
+          "PE-Wax",
+          "Cera Microcristallina",
+          "Bees Wax",
+          "Methylparaben",
+          "Propylparaben",
+          "BHT"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 15850",
+          "CI 45410",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "pink21-invisible-brow-gel",
+    "name": "Invisible Brow Eyebrow Gel",
+    "brand": "Pink 21",
+    "category": "Gel para cejas",
+    "family": "Ojos",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Isododecane",
+          "Phenyl Trimethicone",
+          "Cyclopentasiloxane",
+          "Ceresin",
+          "Microcrystalline Wax",
+          "Beeswax",
+          "Mica",
+          "Silica",
+          "Methylparaben",
+          "Propylparaben",
+          "BHT"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77891",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499",
+          "CI 16035"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
+  },
+  {
+    "id": "saniye-tint-cheek-love",
+    "name": "Tint Cheek Love",
+    "brand": "Saniye",
+    "category": "Rubor líquido",
+    "family": "Rostro",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Aqua",
+          "Hydroxyethylcellulose",
+          "Phenoxyethanol",
+          "Fragrance",
+          "Polysorbate 20"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "3008"
+    }
+  },
+  {
+    "id": "pink21-contour-cream-cs5661",
+    "name": "Contour Cream",
+    "brand": "Pink 21",
+    "category": "Contorno en crema",
+    "family": "Rostro",
+    "status": "current",
+    "groups": [
+      {
+        "title": "Ingredientes",
+        "items": [
+          "Paraffinum Liquidum",
+          "Ethylhexyl Palmitate",
+          "Ceresin",
+          "Beeswax",
+          "Caprylic/Capric",
+          "Adeps Lanae",
+          "Resin",
+          "PE-Wax",
+          "Methylparaben",
+          "Propylparaben",
+          "BHT"
+        ]
+      },
+      {
+        "title": "Puede contener",
+        "items": [
+          "CI 77019",
+          "CI 77891",
+          "CI 16035",
+          "CI 77491",
+          "CI 77492",
+          "CI 77499"
+        ]
+      }
+    ],
+    "anmat": {
+      "resolution": "155/98",
+      "legajo": "2557"
+    }
   }
 ]

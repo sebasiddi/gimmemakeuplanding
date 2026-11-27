@@ -2,7 +2,42 @@ import gsap from 'gsap'
 
 const list = document.querySelector('#ingredients-list')
 const status = document.querySelector('#ingredients-status')
+const filters = document.querySelector('#ingredients-filters')
+const options = document.querySelector('#ingredients-options')
 status.textContent = 'Cargando ingredientes…'
+
+function initFamilyFilters(entries) {
+  const families = [...new Set(entries.map(({ family }) => family).filter(Boolean))]
+
+  function showFamily(selectedFamily) {
+    let count = 0
+
+    entries.forEach(({ family, ingredient }) => {
+      const visible = selectedFamily === null || family === selectedFamily
+      ingredient.hidden = !visible
+      count += Number(visible)
+    })
+
+    status.textContent = count === 1 ? '1 producto' : `${count} productos`
+  }
+
+  for (const family of [null, ...families]) {
+    const label = document.createElement('label')
+    label.className = 'ingredients__option'
+
+    const input = document.createElement('input')
+    input.type = 'radio'
+    input.name = 'ingredient-family'
+    input.checked = family === null
+    input.addEventListener('change', () => showFamily(family))
+
+    label.append(input, family ?? 'Todos')
+    options.appendChild(label)
+  }
+
+  showFamily(null)
+  filters.hidden = false
+}
 
 // ======================================
 // INGREDIENTES - ACORDEONES
@@ -96,7 +131,7 @@ async function loadProducts() {
 
     const products = await response.json()
 
-    products.forEach((product, index) => {
+    const entries = products.map((product, index) => {
 
       const number = String(index + 1).padStart(2, '0')
 
@@ -142,11 +177,16 @@ async function loadProducts() {
 
       ingredient.append(summary, content)
       list.appendChild(ingredient)
+
+      return {
+        family: typeof product.family === 'string' ? product.family.trim() : '',
+        ingredient,
+      }
     })
 
 
     initIngredientAccordions()
-    status.hidden = true
+    initFamilyFilters(entries)
 
   } catch (error) {
     status.textContent = 'No pudimos cargar los ingredientes. Volvé a intentar recargando la página.'
