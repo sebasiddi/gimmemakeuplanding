@@ -54,18 +54,24 @@ function createReviewPanel({ average, count, comments }, href) {
   return panel
 }
 
+async function fetchReviews(url) {
+  const response = await fetch(url)
+  if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) {
+    throw new Error(`No se pudieron obtener las opiniones de ${url}`)
+  }
+  return response.json()
+}
+
 export async function loadProductReviews() {
   try {
-    const response = await fetch('/api/local/product-reviews')
-    if (!response.headers.get('content-type')?.includes('application/json')) {
-      throw new Error('Reiniciá Vite para cargar la ruta local de opiniones.')
-    }
-
-    const reviews = await response.json()
-    if (!response.ok) throw new Error(reviews.error)
+    const published = await fetchReviews('/data/product-reviews.json')
+    const live = import.meta.env.DEV
+      ? await fetchReviews('/api/local/product-reviews').catch(() => ({}))
+      : {}
 
     for (const product of document.querySelectorAll('[data-reviews]')) {
-      const review = reviews[product.dataset.reviews]
+      const key = product.dataset.reviews
+      const review = live[key] ?? published[key]
       const link = product.querySelector('.product__link')
       if (link && review?.count >= minimumRatings && review.average > 0 && review.average <= 5) {
         link.before(createReviewPanel(review, link.href))

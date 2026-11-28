@@ -439,9 +439,7 @@ function initHiddenGemsSequence() {
 
 initHiddenGemsSequence()
 
-if (import.meta.env.DEV) {
-  import('./calendar-reviews.js').then(({ loadProductReviews }) => loadProductReviews())
-}
+import('./calendar-reviews.js').then(({ loadProductReviews }) => loadProductReviews())
 
 document.querySelectorAll('a.product__image').forEach((link) => {
   link.addEventListener('click', () => {
