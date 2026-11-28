@@ -1,0 +1,65 @@
+.product-reviews {
+  max-width: 29rem;
+  margin-block: 1.25rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid #ead5df;
+  border-radius: 1rem;
+  background: #fff7fb;
+  color: #371c27;
+  text-align: left;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.product-reviews__rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.65rem;
+}
+
+.product-reviews__stars {
+  background: linear-gradient(90deg, #a3436c var(--rating-fill), #dfc7d2 var(--rating-fill));
+  background-clip: text;
+  color: transparent;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+}
+
+.product-reviews__count {
+  color: #674656;
+}
+
+.product-reviews summary {
+  width: fit-content;
+  margin-top: 0.55rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.product-reviews blockquote {
+  margin: 0.65rem 0;
+  padding: 0.4rem 0.7rem;
+  border-inline-start: 2px solid #d9a2bb;
+  overflow-wrap: anywhere;
+}
+
+.product .product-reviews blockquote p {
+  margin: 0.2rem 0 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.product-reviews a {
+  display: inline-block;
+  margin-top: 0.4rem;
+  color: #803450;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.product-reviews :focus-visible {
+  outline: 2px solid #803450;
+  outline-offset: 3px;
+}

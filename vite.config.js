@@ -1,7 +1,9 @@
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
+import { localCalendarReviews } from './dev/calendar-reviews.js'
 
 export default defineConfig({
+  plugins: [localCalendarReviews()],
   build: {
     rolldownOptions: {
       input: [
